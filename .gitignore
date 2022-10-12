@@ -1,0 +1,6 @@
+# Project exclude paths
+/CloudAlibaba-Config-3377/target/
+/CloudAlibaba-Consumer-8083/target/
+/CloudAlibaba-Nacos-9001/target/
+/CloudAlibaba-Nacos-9002/target/
+/target/

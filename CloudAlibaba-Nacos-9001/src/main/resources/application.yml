@@ -1,0 +1,18 @@
+server:
+  port: 9001
+
+# 应用名称
+spring:
+  application:
+    name: nacos-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+# 公开信息
+management:
+  endpoint:
+    web:
+      exposure:
+        include:'*'
