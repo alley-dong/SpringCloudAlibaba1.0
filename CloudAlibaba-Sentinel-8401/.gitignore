@@ -1,4 +1,3 @@
-# Project exclude paths
 HELP.md
 target/
 .idea
@@ -30,10 +29,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-
-/CloudAlibaba-Config-3377/target/
-/CloudAlibaba-Consumer-8083/target/
-/CloudAlibaba-Nacos-9001/target/
-/CloudAlibaba-Nacos-9002/target/
-/target/
