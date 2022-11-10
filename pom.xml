@@ -22,9 +22,13 @@
     <modules>
         <module>CloudAlibaba-Nacos-9001</module>
         <module>CloudAlibaba-Nacos-9002</module>
+        <module>CloudAlibaba-Provider-9003</module>
+        <module>CloudAlibaba-Provider-9004</module>
         <module>CloudAlibaba-Consumer-8083</module>
+        <module>CloudAlibaba-Consumer-8084</module>
         <module>CloudAlibaba-Config-3377</module>
         <module>CloudAlibaba-Sentinel-8401</module>
+        <module>CloudAlibaba-Commons</module>
     </modules>
 
     <dependencies>
@@ -46,6 +50,15 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
