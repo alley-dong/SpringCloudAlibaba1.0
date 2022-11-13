@@ -24,6 +24,10 @@ public class DataController {
     @GetMapping("info/{id}")
     public JsonResult<String> msbSql(@PathVariable("id") Long id){
         JsonResult<String> result = new JsonResult(200,hashMap.get(id));
+
+
+        Pojo pojo= null;
+        Integer age = pojo.getAge();
         return result;
     }
 }
