@@ -1,5 +1,6 @@
 package com.dongchanglong.cloudalibabaprovider9003.exception;
 
+import com.dongchanglong.cloudalibabacommons.JsonResult;
 import org.apache.commons.lang.ObjectUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,10 +35,10 @@ public class CustomExceptionAdvice {
      * @return
      */
     @ExceptionHandler(NullPointerException.class)
-    public BaseResult NullPointerExceptionHandler(HttpServletRequest request, NullPointerException nullEx) {
+    public JsonResult NullPointerExceptionHandler(HttpServletRequest request, NullPointerException nullEx) {
         //打印异常信息。空指针异常比较特殊，必须放在下面一行代码 log.info() 之前才可以正常打印出异常类的路径(暂不知为何)
         printStackTraceInfo(nullEx.getStackTrace());
-        return new BaseResult(200, false, "空指针异常");
+        return new JsonResult(200, false, "空指针异常");
     }
 
 

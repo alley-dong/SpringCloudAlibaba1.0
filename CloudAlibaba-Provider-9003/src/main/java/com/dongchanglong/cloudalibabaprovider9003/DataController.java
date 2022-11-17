@@ -1,10 +1,9 @@
 package com.dongchanglong.cloudalibabaprovider9003;
 
 import com.dongchanglong.cloudalibabacommons.JsonResult;
+import com.dongchanglong.cloudalibabacommons.TestEntity;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 
@@ -24,8 +23,15 @@ public class DataController {
     @GetMapping("info/{id}")
     public JsonResult<String> msbSql(@PathVariable("id") Long id){
         JsonResult<String> result = new JsonResult(200,hashMap.get(id));
+//        Pojo pojo= null;
+//        Integer age = pojo.getAge();
+        return result;
+    }
 
 
+    @PostMapping("fallbackList")
+    public JsonResult<String> msbSql(@RequestBody TestEntity testEntity){
+        JsonResult<String> result = new JsonResult(200,hashMap.get(1L));
         Pojo pojo= null;
         Integer age = pojo.getAge();
         return result;
