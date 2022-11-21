@@ -34,4 +34,17 @@ public class DataController {
         JsonResult<String> result = new JsonResult(200,"ServerPort 9003:"+hashMap.get(1L));
         return result;
     }
+
+
+    @PostMapping("timeout")
+    public JsonResult<String> timeout(@RequestBody TestEntity testEntity){
+        JsonResult<String> result = new JsonResult(200,"ServerPort 9003");
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
 }

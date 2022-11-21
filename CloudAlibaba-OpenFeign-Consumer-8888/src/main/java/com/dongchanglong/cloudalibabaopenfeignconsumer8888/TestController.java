@@ -18,4 +18,9 @@ public class TestController {
     public JsonResult<String> msbSql(@RequestBody TestEntity testEntity){
         return openFeignService.msbSql(testEntity);
     }
+
+    @PostMapping("timeout")
+    public JsonResult<String> timeout(@RequestBody TestEntity testEntity){
+        return openFeignService.timeout(testEntity);
+    }
 }

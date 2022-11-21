@@ -24,4 +24,7 @@ public interface OpenFeignService {
     @PostMapping("fallbackList")
     public JsonResult<String> msbSql(@RequestBody TestEntity testEntity);
 
+    @PostMapping("timeout")
+    public JsonResult<String> timeout(@RequestBody TestEntity testEntity);
+
 }
