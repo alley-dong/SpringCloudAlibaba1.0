@@ -31,9 +31,7 @@ public class DataController {
 
     @PostMapping("fallbackList")
     public JsonResult<String> msbSql(@RequestBody TestEntity testEntity){
-        JsonResult<String> result = new JsonResult(200,hashMap.get(1L));
-        Pojo pojo= null;
-        Integer age = pojo.getAge();
+        JsonResult<String> result = new JsonResult(200,"ServerPort 9003:"+hashMap.get(1L));
         return result;
     }
 }

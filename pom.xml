@@ -28,6 +28,7 @@
         <module>CloudAlibaba-Consumer-8084</module>
         <module>CloudAlibaba-Config-3377</module>
         <module>CloudAlibaba-Sentinel-8401</module>
+        <module>CloudAlibaba-OpenFeign-Consumer-8888</module>
         <module>CloudAlibaba-Commons</module>
     </modules>
 
