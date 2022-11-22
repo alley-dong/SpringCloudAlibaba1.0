@@ -3,6 +3,7 @@ package com.dongchanglong.cloudalibabaconsumer8084;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.dongchanglong.cloudalibabacommons.JsonResult;
 import com.dongchanglong.cloudalibabacommons.TestEntity;
+import com.dongchanglong.cloudalibabaconsumer8084.feign.FeignService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -18,6 +19,10 @@ public class DemoController {
 
     @Autowired
     private RestTemplate restTemplate;
+
+    @Autowired
+    private FeignService feignService;
+
 
     @GetMapping("/consumer/fallback/{id}")
     @SentinelResource(value = "fallback",fallbackClass = ConsumerFallbackClass.class,fallback = "nullPointerException2")
@@ -51,4 +56,12 @@ public class DemoController {
         return result;
     }
 
+
+    @GetMapping("/getInfo/{id}")
+    public JsonResult<String> getInfo(@PathVariable("id") Long id){
+        if (id > 3) {
+            throw new NullPointerException("excrption");
+        }
+        return feignService.msbSql(id);
+    }
 }
