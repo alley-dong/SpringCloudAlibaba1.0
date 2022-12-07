@@ -57,4 +57,11 @@ public class FlowLimitController {
         return "-----bycustomer";
     }
 
+
+
+    @GetMapping("/test")
+    public String test(){
+        log.info(Thread.currentThread().getName()+"：test");
+        return testService.common();
+    }
 }
