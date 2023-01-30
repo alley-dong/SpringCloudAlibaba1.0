@@ -26,6 +26,8 @@
         <module>CloudAlibaba-Provider-9004</module>
         <module>CloudAlibaba-Consumer-8083</module>
         <module>CloudAlibaba-Consumer-8084</module>
+        <module>CloudAlibaba-Seata-Order-8801</module>
+        <module>CloudAlibaba-Seata-Stock-8803</module>
         <module>CloudAlibaba-Config-3377</module>
         <module>CloudAlibaba-Sentinel-8401</module>
         <module>CloudAlibaba-OpenFeign-Consumer-8888</module>
